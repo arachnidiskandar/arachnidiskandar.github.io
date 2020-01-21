@@ -71,7 +71,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div id=\"conteudo\" class=\"bg-img\">\n    <div class=\"d-flex\">\n        <h3 class=\"align-self-center\">Augusto Rafael</h3>\n    </div>\n    <div id=\"teste\">\n        <h3 class=\"bg-primary\">Meus Projetos</h3>\n        <app-projetos></app-projetos>\n    </div>\n    <div>\n        <h3 class=\"bg-primary\">Sobre</h3>\n    </div>\n</div>\n\n\n";
+    __webpack_exports__["default"] = "<div [ngStyle]=\"!aparecendoMenu ? {'filter': 'blur(0px)'} : {'filter': 'blur(3px)'}\" id=\"overlay\">\n    <div id=\"conteudo\" class=\"bg-img\">\n        <div class=\"d-flex\">\n        </div>\n        <div id=\"teste\">\n            <h3 class=\"bg-primary\">Meus Projetos</h3>\n            <app-projetos></app-projetos>\n        </div>\n        <div>\n            <h3 class=\"bg-primary\">Sobre</h3>\n        </div>\n    </div>\n</div>\n";
     /***/
   },
 
@@ -91,7 +91,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<nav [@mudarNavBar]=\"estado\" class=\"d-flex fixed-top navbar\">\n    <p>Projetos</p>\n    <p>Sobre</p>\n    <p>Contato</p>\n    <a href=\"https://github.com/arachnidiskandar\">\n        <i [ngStyle]=\"{'color': estado === 'inicial' ? 'white' : '#4168a3' }\" class=\"fa fa-github\"></i>\n    </a>\n    <a class=\"mr-2\" href=\"https://www.linkedin.com/in/augusto-rafael-santos-da-silva-b957b5162/\">\n        <i [ngStyle]=\"{'color': estado === 'inicial' ? 'white' : '#4168a3' }\" class=\"fa fa-linkedin\"></i>\n    </a>\n</nav>";
+    __webpack_exports__["default"] = "<nav [@mudarNavBar]=\"estado\" class=\"d-flex fixed-top navbar\">\n    <div>\n        <h5>Augusto Rafael</h5>\n        <span>Desenvolvedor Front-End</span>\n    </div>\n    <div (clickOutside)=\"mudarMenu($event)\" #opcoes id=\"opcoes\" [class.ativa]=\"menu\">\n        <ul>\n            <li><span>Projetos</span></li>\n            <li><span>Sobre</span></li>\n            <li><span>Contato</span></li>\n            <li><a [ngStyle]=\"mudarEstilo()\" href=\"https://github.com/arachnidiskandar\">\n                    <i class=\"fa fa-github\"></i>\n                </a></li>\n            <li><a [ngStyle]=\"mudarEstilo()\"\n                    href=\"https://www.linkedin.com/in/augusto-rafael-santos-da-silva-b957b5162/\">\n                    <i class=\"fa fa-linkedin\"></i>\n                </a></li>\n        </ul>\n\n\n    </div>\n    <input type=\"checkbox\" id=\"check\">\n    <label for=\"check\" id=\"checkbtn\">\n        <i (click)=\"mudarMenu($event)\" class=\"fa fa-bars\"></i>\n    </label>\n</nav>\n";
     /***/
   },
 
@@ -709,7 +709,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".app {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n          flex-flow: row wrap;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFByb2pldG9zXFxwb3J0aWZvbGlvL3NyY1xcYXBwXFxhcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLG9CQUFBO0VBQUEsYUFBQTtFQUNBLDhCQUFBO0VBQUEsNkJBQUE7VUFBQSxtQkFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmFwcCB7XHJcbiAgICBkaXNwbGF5OmZsZXg7XHJcbiAgICBmbGV4LWZsb3c6cm93IHdyYXA7XHJcbn1cclxuXHJcbiIsIi5hcHAge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWZsb3c6IHJvdyB3cmFwO1xufSJdfQ== */";
+    __webpack_exports__["default"] = ".app {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n          flex-flow: row wrap;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFByb2pldG9zXFxwb3J0aWZvbGlvL3NyY1xcYXBwXFxhcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLG9CQUFBO0VBQUEsYUFBQTtFQUNBLDhCQUFBO0VBQUEsNkJBQUE7VUFBQSxtQkFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmFwcCB7XHJcbiAgICBkaXNwbGF5OmZsZXg7XHJcbiAgICBmbGV4LWZsb3c6cm93IHdyYXA7XHJcbn1cclxuXHJcblxyXG4iLCIuYXBwIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1mbG93OiByb3cgd3JhcDtcbn0iXX0= */";
     /***/
   },
 
@@ -866,7 +866,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "#conteudo div {\n  height: 100vh;\n}\n#conteudo div h3 {\n  padding: 1vh;\n  color: white;\n}\n#conteudo div:nth-child(2) {\n  height: auto;\n}\n#conteudo div:nth-child(2) h3 {\n  color: white;\n}\n#conteudo div:first-child h3 {\n  margin: 0px 100px;\n  color: #4168a3;\n}\n.bg-img {\n  background-image: url('thumb-1920-737474.png');\n  height: 100vh;\n  width: 100%;\n  background-position: center;\n  background-size: cover;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udGVudC9DOlxcUHJvamV0b3NcXHBvcnRpZm9saW8vc3JjXFxhcHBcXGNvbnRlbnRcXGNvbnRlbnQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2NvbnRlbnQvY29udGVudC5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY29udGVudC9DOlxcUHJvamV0b3NcXHBvcnRpZm9saW8vc3JjXFxhcHBcXHN0eWxlc1xcY29sb3JzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBR0k7RUFDSSxhQUFBO0FDRlI7QURHUTtFQUNJLFlBQUE7RUFDQSxZQUFBO0FDRFo7QURJSTtFQUNJLFlBQUE7QUNGUjtBREdRO0VBQ0ksWUFBQTtBQ0RaO0FES1E7RUFDSSxpQkFBQTtFQUNBLGNFbkJGO0FEZ0JWO0FET0E7RUFDSSw4Q0FBQTtFQUNBLGFBQUE7RUFDQSxXQUFBO0VBQ0EsMkJBQUE7RUFDQSxzQkFBQTtBQ0pKIiwiZmlsZSI6InNyYy9hcHAvY29udGVudC9jb250ZW50LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCAnLi4vc3R5bGVzL2NvbG9ycy5zY3NzJztcclxuXHJcbiNjb250ZXVkbyB7ICAgIFxyXG4gICAgZGl2IHtcclxuICAgICAgICBoZWlnaHQ6IDEwMHZoO1xyXG4gICAgICAgIGgzIHtcclxuICAgICAgICAgICAgcGFkZGluZzogMXZoO1xyXG4gICAgICAgICAgICBjb2xvcjogd2hpdGU7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG4gICAgZGl2Om50aC1jaGlsZCgyKXtcclxuICAgICAgICBoZWlnaHQ6IGF1dG87XHJcbiAgICAgICAgaDMge1xyXG4gICAgICAgICAgICBjb2xvcjogd2hpdGU7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG4gICAgZGl2OmZpcnN0LWNoaWxkIHtcclxuICAgICAgICBoMyB7XHJcbiAgICAgICAgICAgIG1hcmdpbjogMHB4IDEwMHB4O1xyXG4gICAgICAgICAgICBjb2xvcjogJHByaW1hcnk7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG59XHJcbi5iZy1pbWcge1xyXG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vLi4vYXNzZXRzL3RodW1iLTE5MjAtNzM3NDc0LnBuZ1wiKTtcclxuICAgIGhlaWdodDogMTAwdmg7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbn1cclxuXHJcblxyXG5cclxuIiwiI2NvbnRldWRvIGRpdiB7XG4gIGhlaWdodDogMTAwdmg7XG59XG4jY29udGV1ZG8gZGl2IGgzIHtcbiAgcGFkZGluZzogMXZoO1xuICBjb2xvcjogd2hpdGU7XG59XG4jY29udGV1ZG8gZGl2Om50aC1jaGlsZCgyKSB7XG4gIGhlaWdodDogYXV0bztcbn1cbiNjb250ZXVkbyBkaXY6bnRoLWNoaWxkKDIpIGgzIHtcbiAgY29sb3I6IHdoaXRlO1xufVxuI2NvbnRldWRvIGRpdjpmaXJzdC1jaGlsZCBoMyB7XG4gIG1hcmdpbjogMHB4IDEwMHB4O1xuICBjb2xvcjogIzQxNjhhMztcbn1cblxuLmJnLWltZyB7XG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi4uLy4uL2Fzc2V0cy90aHVtYi0xOTIwLTczNzQ3NC5wbmdcIik7XG4gIGhlaWdodDogMTAwdmg7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG59IiwiJHByaW1hcnk6ICM0MTY4YTM7XHJcbiJdfQ== */";
+    __webpack_exports__["default"] = "#conteudo div {\n  height: 100vh;\n}\n#conteudo div h3 {\n  padding: 1vh;\n  color: white;\n}\n#conteudo div:nth-child(2) {\n  height: auto;\n}\n#conteudo div:nth-child(2) h3 {\n  color: white;\n}\n.bg-img {\n  background-image: url('thumb-1920-737474.png');\n  height: 100vh;\n  width: 100%;\n  background-position: center;\n  background-size: cover;\n}\n#overlay {\n  z-index: 10;\n  width: 100%;\n  height: 100vh;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udGVudC9DOlxcUHJvamV0b3NcXHBvcnRpZm9saW8vc3JjXFxhcHBcXGNvbnRlbnRcXGNvbnRlbnQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2NvbnRlbnQvY29udGVudC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFHSTtFQUNJLGFBQUE7QUNGUjtBREdRO0VBQ0ksWUFBQTtFQUNBLFlBQUE7QUNEWjtBRElJO0VBQ0ksWUFBQTtBQ0ZSO0FER1E7RUFDSSxZQUFBO0FDRFo7QURLQTtFQUNJLDhDQUFBO0VBQ0EsYUFBQTtFQUNBLFdBQUE7RUFDQSwyQkFBQTtFQUNBLHNCQUFBO0FDRko7QURLQTtFQUNJLFdBQUE7RUFDQSxXQUFBO0VBQ0EsYUFBQTtBQ0ZKIiwiZmlsZSI6InNyYy9hcHAvY29udGVudC9jb250ZW50LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCAnLi4vc3R5bGVzL2NvbG9ycy5zY3NzJztcclxuXHJcbiNjb250ZXVkbyB7ICAgIFxyXG4gICAgZGl2IHtcclxuICAgICAgICBoZWlnaHQ6IDEwMHZoO1xyXG4gICAgICAgIGgzIHtcclxuICAgICAgICAgICAgcGFkZGluZzogMXZoO1xyXG4gICAgICAgICAgICBjb2xvcjogd2hpdGU7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG4gICAgZGl2Om50aC1jaGlsZCgyKXtcclxuICAgICAgICBoZWlnaHQ6IGF1dG87XHJcbiAgICAgICAgaDMge1xyXG4gICAgICAgICAgICBjb2xvcjogd2hpdGU7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG59XHJcbi5iZy1pbWcge1xyXG4gICAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vLi4vYXNzZXRzL3RodW1iLTE5MjAtNzM3NDc0LnBuZ1wiKTtcclxuICAgIGhlaWdodDogMTAwdmg7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbn1cclxuXHJcbiNvdmVybGF5IHtcclxuICAgIHotaW5kZXg6IDEwO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDEwMHZoO1xyXG59XHJcblxyXG5cclxuIiwiI2NvbnRldWRvIGRpdiB7XG4gIGhlaWdodDogMTAwdmg7XG59XG4jY29udGV1ZG8gZGl2IGgzIHtcbiAgcGFkZGluZzogMXZoO1xuICBjb2xvcjogd2hpdGU7XG59XG4jY29udGV1ZG8gZGl2Om50aC1jaGlsZCgyKSB7XG4gIGhlaWdodDogYXV0bztcbn1cbiNjb250ZXVkbyBkaXY6bnRoLWNoaWxkKDIpIGgzIHtcbiAgY29sb3I6IHdoaXRlO1xufVxuXG4uYmctaW1nIHtcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vLi4vYXNzZXRzL3RodW1iLTE5MjAtNzM3NDc0LnBuZ1wiKTtcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgd2lkdGg6IDEwMCU7XG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3Zlcjtcbn1cblxuI292ZXJsYXkge1xuICB6LWluZGV4OiAxMDtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwdmg7XG59Il19 */";
     /***/
   },
 
@@ -907,23 +907,42 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _shared_projetos__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ../shared/projetos */
     "./src/app/shared/projetos.ts");
+    /* harmony import */
+
+
+    var _shared_services_navbar_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../shared/services/navbar.service */
+    "./src/app/shared/services/navbar.service.ts");
 
     var ContentComponent =
     /*#__PURE__*/
     function () {
-      function ContentComponent() {
+      function ContentComponent(navbarService) {
         _classCallCheck(this, ContentComponent);
 
+        this.navbarService = navbarService;
         this.projetos = _shared_projetos__WEBPACK_IMPORTED_MODULE_2__["MEUS_PROJETOS"];
       }
 
       _createClass(ContentComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          var _this = this;
+
+          this.navbarService.navbarAparecendo.subscribe(function (data) {
+            return _this.aparecendoMenu = data;
+          });
+        }
       }]);
 
       return ContentComponent;
     }();
+
+    ContentComponent.ctorParameters = function () {
+      return [{
+        type: _shared_services_navbar_service__WEBPACK_IMPORTED_MODULE_3__["NavbarService"]
+      }];
+    };
 
     ContentComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-content',
@@ -953,7 +972,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "nav {\n  -webkit-box-flex: 0;\n          flex: 0 1 100%;\n  padding: 1vh;\n}\n@media screen and (max-width: 500px) {\n  nav {\n    -webkit-box-pack: center;\n            justify-content: center;\n  }\n}\n@media screen and (min-width: 501px) {\n  nav {\n    -webkit-box-pack: end;\n            justify-content: flex-end;\n  }\n}\nnav p {\n  font-weight: bold;\n  font-size: 20px;\n}\nnav a {\n  color: #4168a3;\n}\nnav a i {\n  font-size: 30px;\n  color: white;\n}\nnav p, nav i {\n  margin: 2px 2vw;\n}\nnav p:hover, nav a:hover {\n  color: #c0c0c0;\n  cursor: pointer;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaGVhZGVyL0M6XFxQcm9qZXRvc1xccG9ydGlmb2xpby9zcmNcXGFwcFxcaGVhZGVyXFxoZWFkZXIuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2hlYWRlci9oZWFkZXIuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2hlYWRlci9DOlxcUHJvamV0b3NcXHBvcnRpZm9saW8vc3JjXFxhcHBcXHN0eWxlc1xcY29sb3JzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDSSxtQkFBQTtVQUFBLGNBQUE7RUFDQSxZQUFBO0FDREo7QURFSTtFQUhKO0lBSVEsd0JBQUE7WUFBQSx1QkFBQTtFQ0NOO0FBQ0Y7QURBSTtFQU5KO0lBT1EscUJBQUE7WUFBQSx5QkFBQTtFQ0dOO0FBQ0Y7QURGSTtFQUNJLGlCQUFBO0VBQ0EsZUFBQTtBQ0lSO0FERkk7RUFDSSxjRWhCRTtBRG9CVjtBREhRO0VBQ0ksZUFBQTtFQUNBLFlBQUE7QUNLWjtBRERJO0VBQ0ksZUFBQTtBQ0dSO0FEREk7RUFDSSxjQUFBO0VBQ0EsZUFBQTtBQ0dSIiwiZmlsZSI6InNyYy9hcHAvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgJy4uL3N0eWxlcy9jb2xvcnMuc2Nzcyc7XHJcblxyXG5uYXYge1xyXG4gICAgZmxleDowIDEgMTAwJTtcclxuICAgIHBhZGRpbmc6IDF2aDtcclxuICAgIEBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDUwMHB4KSB7XHJcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICB9XHJcbiAgICBAbWVkaWEgc2NyZWVuIGFuZCAobWluLXdpZHRoOjUwMXB4KSB7XHJcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcclxuICAgIH1cclxuICAgIHAge1xyXG4gICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgICAgIGZvbnQtc2l6ZTogMjBweDtcclxuICAgIH1cclxuICAgIGEge1xyXG4gICAgICAgIGNvbG9yOiAkcHJpbWFyeTtcclxuICAgICAgICBpIHtcclxuICAgICAgICAgICAgZm9udC1zaXplOiAzMHB4O1xyXG4gICAgICAgICAgICBjb2xvcjogd2hpdGU7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG4gICAgXHJcbiAgICBwLCBpIHtcclxuICAgICAgICBtYXJnaW46IDJweCAydnc7XHJcbiAgICB9XHJcbiAgICBwOmhvdmVyLCBhOmhvdmVyIHtcclxuICAgICAgICBjb2xvcjogI2MwYzBjMDtcclxuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICB9XHJcbn1cclxuIiwibmF2IHtcbiAgZmxleDogMCAxIDEwMCU7XG4gIHBhZGRpbmc6IDF2aDtcbn1cbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDUwMHB4KSB7XG4gIG5hdiB7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIH1cbn1cbkBtZWRpYSBzY3JlZW4gYW5kIChtaW4td2lkdGg6IDUwMXB4KSB7XG4gIG5hdiB7XG4gICAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcbiAgfVxufVxubmF2IHAge1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgZm9udC1zaXplOiAyMHB4O1xufVxubmF2IGEge1xuICBjb2xvcjogIzQxNjhhMztcbn1cbm5hdiBhIGkge1xuICBmb250LXNpemU6IDMwcHg7XG4gIGNvbG9yOiB3aGl0ZTtcbn1cbm5hdiBwLCBuYXYgaSB7XG4gIG1hcmdpbjogMnB4IDJ2dztcbn1cbm5hdiBwOmhvdmVyLCBuYXYgYTpob3ZlciB7XG4gIGNvbG9yOiAjYzBjMGMwO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59IiwiJHByaW1hcnk6ICM0MTY4YTM7XHJcbiJdfQ== */";
+    __webpack_exports__["default"] = "nav {\n  -webkit-box-flex: 0;\n          flex: 0 1 100%;\n  padding: 0vh 1vw;\n  -webkit-box-align: center;\n          align-items: center;\n  height: 8.1vh;\n}\nnav div:first-child h5 {\n  margin: 0;\n}\nnav div:first-child span {\n  font-size: 14px;\n}\nnav #opcoes {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-pack: end;\n          justify-content: flex-end;\n}\nnav #opcoes ul li > span:hover, nav #opcoes ul i:hover {\n  border-bottom: solid 1px;\n  cursor: pointer;\n}\nnav #opcoes ul li {\n  font-weight: bold;\n  font-size: 20px;\n  margin: 0;\n  list-style: none;\n  margin: 1vw;\n  border-bottom: solid 1px transparent;\n}\nnav #opcoes ul li a i {\n  font-size: 30px;\n}\nnav .checkbtn {\n  font-size: 30px;\n  cursor: pointer;\n  display: none;\n}\nnav #check {\n  display: none;\n}\n@media screen and (max-width: 768px) {\n  #opcoes {\n    position: absolute;\n    top: 8vh;\n    height: 92.1vh;\n    right: 0px;\n    background-color: white;\n    display: -webkit-box;\n    display: flex;\n    width: 50vw;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: reverse;\n            flex-direction: column-reverse;\n    -webkit-box-align: center;\n            align-items: center;\n    z-index: 99;\n    -webkit-transform: translateX(100%);\n            transform: translateX(100%);\n    -webkit-transition: -webkit-transform 0.2s ease-in;\n    transition: -webkit-transform 0.2s ease-in;\n    transition: transform 0.2s ease-in;\n    transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;\n  }\n  #opcoes li, #opcoes i {\n    color: #4168a3;\n    font-size: 14px;\n  }\n\n  #opcoes.ativa {\n    -webkit-transform: translateX(0%);\n            transform: translateX(0%);\n  }\n\n  #checkbtn {\n    display: block;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaGVhZGVyL0M6XFxQcm9qZXRvc1xccG9ydGlmb2xpby9zcmNcXGFwcFxcaGVhZGVyXFxoZWFkZXIuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2hlYWRlci9oZWFkZXIuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2hlYWRlci9DOlxcUHJvamV0b3NcXHBvcnRpZm9saW8vc3JjXFxhcHBcXHN0eWxlc1xcY29sb3JzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDSSxtQkFBQTtVQUFBLGNBQUE7RUFDQSxnQkFBQTtFQUNBLHlCQUFBO1VBQUEsbUJBQUE7RUFDQSxhQUFBO0FDREo7QURHUTtFQUNJLFNBQUE7QUNEWjtBREdRO0VBQ0ksZUFBQTtBQ0RaO0FESUk7RUFDSSxvQkFBQTtFQUFBLGFBQUE7RUFDQSxxQkFBQTtVQUFBLHlCQUFBO0FDRlI7QURJWTtFQUNJLHdCQUFBO0VBQ0EsZUFBQTtBQ0ZoQjtBRElZO0VBQ0ksaUJBQUE7RUFDQSxlQUFBO0VBQ0EsU0FBQTtFQUNBLGdCQUFBO0VBQ0EsV0FBQTtFQUNBLG9DQUFBO0FDRmhCO0FESW9CO0VBQ0ksZUFBQTtBQ0Z4QjtBRFNJO0VBQ0ksZUFBQTtFQUNBLGVBQUE7RUFDQSxhQUFBO0FDUFI7QURTSTtFQUNJLGFBQUE7QUNQUjtBRFdBO0VBQ0k7SUFDSSxrQkFBQTtJQUNBLFFBQUE7SUFDQSxjQUFBO0lBQ0EsVUFBQTtJQUNBLHVCQUFBO0lBQ0Esb0JBQUE7SUFBQSxhQUFBO0lBQ0EsV0FBQTtJQUNBLDRCQUFBO0lBQUEsOEJBQUE7WUFBQSw4QkFBQTtJQUNBLHlCQUFBO1lBQUEsbUJBQUE7SUFDQSxXQUFBO0lBQ0EsbUNBQUE7WUFBQSwyQkFBQTtJQUNBLGtEQUFBO0lBQUEsMENBQUE7SUFBQSxrQ0FBQTtJQUFBLGtFQUFBO0VDUk47RURTTTtJQUNJLGNFaEVGO0lGaUVFLGVBQUE7RUNQVjs7RURVRTtJQUNJLGlDQUFBO1lBQUEseUJBQUE7RUNQTjs7RURTRTtJQUNJLGNBQUE7RUNOTjtBQUNGIiwiZmlsZSI6InNyYy9hcHAvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgJy4uL3N0eWxlcy9jb2xvcnMuc2Nzcyc7XHJcblxyXG5uYXYge1xyXG4gICAgZmxleDowIDEgMTAwJTtcclxuICAgIHBhZGRpbmc6IDB2aCAxdnc7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgaGVpZ2h0OiA4LjF2aDtcclxuICAgIGRpdjpmaXJzdC1jaGlsZCB7XHJcbiAgICAgICAgaDUge1xyXG4gICAgICAgICAgICBtYXJnaW46IDA7XHJcbiAgICAgICAgfVxyXG4gICAgICAgIHNwYW4ge1xyXG4gICAgICAgICAgICBmb250LXNpemU6IDE0cHg7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG4gICAgI29wY29lcyB7XHJcbiAgICAgICAgZGlzcGxheTogZmxleDtcclxuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kO1xyXG4gICAgICAgIHVsIHtcclxuICAgICAgICAgICAgbGkgPiBzcGFuOmhvdmVyLCBpOmhvdmVyIHtcclxuICAgICAgICAgICAgICAgIGJvcmRlci1ib3R0b206IHNvbGlkIDFweDtcclxuICAgICAgICAgICAgICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICBsaSB7XHJcbiAgICAgICAgICAgICAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogMjBweDtcclxuICAgICAgICAgICAgICAgIG1hcmdpbjogMDtcclxuICAgICAgICAgICAgICAgIGxpc3Qtc3R5bGU6IG5vbmU7XHJcbiAgICAgICAgICAgICAgICBtYXJnaW46IDF2dztcclxuICAgICAgICAgICAgICAgIGJvcmRlci1ib3R0b206IHNvbGlkIDFweCB0cmFuc3BhcmVudDtcclxuICAgICAgICAgICAgICAgIGEge1xyXG4gICAgICAgICAgICAgICAgICAgIGkge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICBmb250LXNpemU6IDMwcHg7XHJcbiAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgfVxyXG4gICAgICAgIFxyXG4gICAgfVxyXG4gICAgLmNoZWNrYnRuIHtcclxuICAgICAgICBmb250LXNpemU6IDMwcHg7XHJcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgICAgIGRpc3BsYXk6IG5vbmU7XHJcbiAgICB9XHJcbiAgICAjY2hlY2sge1xyXG4gICAgICAgIGRpc3BsYXk6IG5vbmU7XHJcbiAgICB9XHJcbn1cclxuXHJcbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XHJcbiAgICAjb3Bjb2VzIHtcclxuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICAgICAgdG9wOiA4dmg7XHJcbiAgICAgICAgaGVpZ2h0OiA5Mi4xdmg7XHJcbiAgICAgICAgcmlnaHQ6IDBweDtcclxuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcclxuICAgICAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgICAgIHdpZHRoOiA1MHZ3O1xyXG4gICAgICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW4tcmV2ZXJzZTtcclxuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgICAgIHotaW5kZXg6IDk5O1xyXG4gICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgxMDAlKTtcclxuICAgICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4ycyBlYXNlLWluO1xyXG4gICAgICAgIGxpLCBpIHtcclxuICAgICAgICAgICAgY29sb3I6ICRwcmltYXJ5O1xyXG4gICAgICAgICAgICBmb250LXNpemU6IDE0cHg7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG4gICAgI29wY29lcy5hdGl2YSB7XHJcbiAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKDAlKTtcclxuICAgIH1cclxuICAgICNjaGVja2J0biB7XHJcbiAgICAgICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICB9XHJcbn1cclxuIiwibmF2IHtcbiAgZmxleDogMCAxIDEwMCU7XG4gIHBhZGRpbmc6IDB2aCAxdnc7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGhlaWdodDogOC4xdmg7XG59XG5uYXYgZGl2OmZpcnN0LWNoaWxkIGg1IHtcbiAgbWFyZ2luOiAwO1xufVxubmF2IGRpdjpmaXJzdC1jaGlsZCBzcGFuIHtcbiAgZm9udC1zaXplOiAxNHB4O1xufVxubmF2ICNvcGNvZXMge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kO1xufVxubmF2ICNvcGNvZXMgdWwgbGkgPiBzcGFuOmhvdmVyLCBuYXYgI29wY29lcyB1bCBpOmhvdmVyIHtcbiAgYm9yZGVyLWJvdHRvbTogc29saWQgMXB4O1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5uYXYgI29wY29lcyB1bCBsaSB7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBmb250LXNpemU6IDIwcHg7XG4gIG1hcmdpbjogMDtcbiAgbGlzdC1zdHlsZTogbm9uZTtcbiAgbWFyZ2luOiAxdnc7XG4gIGJvcmRlci1ib3R0b206IHNvbGlkIDFweCB0cmFuc3BhcmVudDtcbn1cbm5hdiAjb3Bjb2VzIHVsIGxpIGEgaSB7XG4gIGZvbnQtc2l6ZTogMzBweDtcbn1cbm5hdiAuY2hlY2tidG4ge1xuICBmb250LXNpemU6IDMwcHg7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgZGlzcGxheTogbm9uZTtcbn1cbm5hdiAjY2hlY2sge1xuICBkaXNwbGF5OiBub25lO1xufVxuXG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAjb3Bjb2VzIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiA4dmg7XG4gICAgaGVpZ2h0OiA5Mi4xdmg7XG4gICAgcmlnaHQ6IDBweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIHdpZHRoOiA1MHZ3O1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW4tcmV2ZXJzZTtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIHotaW5kZXg6IDk5O1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgxMDAlKTtcbiAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4ycyBlYXNlLWluO1xuICB9XG4gICNvcGNvZXMgbGksICNvcGNvZXMgaSB7XG4gICAgY29sb3I6ICM0MTY4YTM7XG4gICAgZm9udC1zaXplOiAxNHB4O1xuICB9XG5cbiAgI29wY29lcy5hdGl2YSB7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKDAlKTtcbiAgfVxuXG4gICNjaGVja2J0biB7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gIH1cbn0iLCIkcHJpbWFyeTogIzQxNjhhMztcclxuIl19 */";
     /***/
   },
 
@@ -994,34 +1013,91 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/animations */
     "./node_modules/@angular/animations/fesm2015/animations.js");
+    /* harmony import */
+
+
+    var _shared_services_navbar_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../shared/services/navbar.service */
+    "./src/app/shared/services/navbar.service.ts");
 
     var HeaderComponent =
     /*#__PURE__*/
     function () {
-      function HeaderComponent() {
+      function HeaderComponent(eleRef, navBarService) {
         _classCallCheck(this, HeaderComponent);
 
+        this.eleRef = eleRef;
+        this.navBarService = navBarService;
         this.estado = 'inicial';
+        this.menu = false;
       }
 
       _createClass(HeaderComponent, [{
         key: "onScroll",
-        value: function onScroll(event) {
+        value: function onScroll() {
           window.pageYOffset > 560 ? this.estado = 'final' : this.estado = 'inicial';
+        }
+      }, {
+        key: "clickOut",
+        value: function clickOut(targetElement) {
+          if (!this.eleRef.nativeElement.contains(targetElement) && this.opcoes.nativeElement.classList.contains('ativa')) {
+            this.mudarMenu(event);
+          }
         }
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {}
       }, {
-        key: "mudarEstado",
-        value: function mudarEstado() {}
+        key: "mudarEstilo",
+        value: function mudarEstilo() {
+          if (this.estado === 'inicial') {
+            return {
+              color: 'white',
+              borderBottom: 'white'
+            };
+          } else {
+            return {
+              color: '#4168a3',
+              borderBottom: '#4168a3'
+            };
+          }
+        }
+      }, {
+        key: "mudarMenu",
+        value: function mudarMenu($event) {
+          $event.stopPropagation();
+          this.gerenciarBody();
+
+          if (window.pageYOffset < 560) {
+            this.estado === 'final' ? this.estado = 'inicial' : this.estado = 'final';
+          }
+
+          this.menu ? this.menu = false : this.menu = true;
+          this.navBarService.updatedNavbar(this.menu);
+        }
+      }, {
+        key: "gerenciarBody",
+        value: function gerenciarBody() {
+          document.body.style.overflow === 'hidden' ? document.body.style.overflow = 'auto' : document.body.style.overflow = 'hidden';
+        }
       }]);
 
       return HeaderComponent;
     }();
 
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('window:scroll', ['$event']) // for window scroll events
-    ], HeaderComponent.prototype, "onScroll", null);
+    HeaderComponent.ctorParameters = function () {
+      return [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
+      }, {
+        type: _shared_services_navbar_service__WEBPACK_IMPORTED_MODULE_3__["NavbarService"]
+      }];
+    };
+
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('opcoes', {
+      static: false
+    })], HeaderComponent.prototype, "opcoes", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('window:scroll')], HeaderComponent.prototype, "onScroll", null);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('document:click', ['$event.target'])], HeaderComponent.prototype, "clickOut", null);
     HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-header',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -1283,6 +1359,70 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./src/app/shared/services/navbar.service.ts":
+  /*!***************************************************!*\
+    !*** ./src/app/shared/services/navbar.service.ts ***!
+    \***************************************************/
+
+  /*! exports provided: NavbarService */
+
+  /***/
+  function srcAppSharedServicesNavbarServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "NavbarService", function () {
+      return NavbarService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+
+    var NavbarService =
+    /*#__PURE__*/
+    function () {
+      function NavbarService() {
+        _classCallCheck(this, NavbarService);
+
+        this.navbar = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](false);
+        this.navbarAparecendo = this.navbar.asObservable();
+      }
+
+      _createClass(NavbarService, [{
+        key: "updatedNavbar",
+        value: function updatedNavbar(data) {
+          this.navbar.next(data);
+        }
+      }]);
+
+      return NavbarService;
+    }();
+
+    NavbarService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+      providedIn: 'root'
+    })], NavbarService);
+    /***/
+  },
+
+  /***/
   "./src/environments/environment.ts":
   /*!*****************************************!*\
     !*** ./src/environments/environment.ts ***!
@@ -1348,33 +1488,45 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    var hammerjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! hammerjs */
+    "./node_modules/hammerjs/hammer.js");
+    /* harmony import */
+
+
+    var hammerjs__WEBPACK_IMPORTED_MODULE_1___default =
+    /*#__PURE__*/
+    __webpack_require__.n(hammerjs__WEBPACK_IMPORTED_MODULE_1__);
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
 
 
-    var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/platform-browser-dynamic */
     "./node_modules/@angular/platform-browser-dynamic/fesm2015/platform-browser-dynamic.js");
     /* harmony import */
 
 
-    var _app_app_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _app_app_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ./app/app.module */
     "./src/app/app.module.ts");
     /* harmony import */
 
 
-    var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _environments_environment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! ./environments/environment */
     "./src/environments/environment.ts");
 
-    if (_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].production) {
-      Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
+    if (_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].production) {
+      Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["enableProdMode"])();
     }
 
-    Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"]).catch(function (err) {
+    Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_3__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_4__["AppModule"]).catch(function (err) {
       return console.error(err);
     });
     /***/
