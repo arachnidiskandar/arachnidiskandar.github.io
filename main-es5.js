@@ -1010,7 +1010,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(HeaderComponent, [{
         key: "onScroll",
         value: function onScroll() {
-          window.pageYOffset > 560 ? this.estado = 'final' : this.estado = 'inicial';
+          window.pageYOffset > window.innerHeight * 0.9 ? this.estado = 'final' : this.estado = 'inicial';
         }
       }, {
         key: "clickOut",
@@ -1043,7 +1043,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           $event.stopPropagation();
           this.gerenciarBody();
 
-          if (window.pageYOffset < 560) {
+          if (window.pageYOffset < 580) {
             this.estado === 'final' ? this.estado = 'inicial' : this.estado = 'final';
           }
 

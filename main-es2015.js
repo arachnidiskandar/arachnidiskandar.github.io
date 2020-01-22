@@ -498,7 +498,7 @@ let HeaderComponent = class HeaderComponent {
         this.menu = false;
     }
     onScroll() {
-        window.pageYOffset > 560 ? this.estado = 'final' : this.estado = 'inicial';
+        window.pageYOffset > window.innerHeight * 0.9 ? this.estado = 'final' : this.estado = 'inicial';
     }
     clickOut(targetElement) {
         if (!this.eleRef.nativeElement.contains(targetElement) &&
@@ -525,7 +525,7 @@ let HeaderComponent = class HeaderComponent {
     mudarMenu($event) {
         $event.stopPropagation();
         this.gerenciarBody();
-        if (window.pageYOffset < 560) {
+        if (window.pageYOffset < 580) {
             this.estado === 'final' ? this.estado = 'inicial' : this.estado = 'final';
         }
         this.menu ? this.menu = false : this.menu = true;
